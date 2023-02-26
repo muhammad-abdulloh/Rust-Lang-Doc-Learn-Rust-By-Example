@@ -19,7 +19,6 @@ fn main(){
     println!("Now {:?} will print", Structure(3));
 
     println!("Now {:?} will print!", Deep(Structure(7)));
-
 }
 */
 
@@ -38,8 +37,6 @@ fn main(){
     let _name = "Peter";
     let _age = 27;
     let peter = Person { _name, _age };
-
     // Pretty print :)
     println!("{:?}", peter);  // Person { _name: "Peter", _age: 27}
-
 }
