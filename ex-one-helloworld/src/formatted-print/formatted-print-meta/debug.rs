@@ -34,11 +34,12 @@ struct Person<'a> {
     _age: u8
 }
 
-fn main(){
+fn main(){  
     let _name = "Peter";
     let _age = 27;
     let peter = Person { _name, _age };
 
     // Pretty print :)
     println!("{:?}", peter);  // Person { _name: "Peter", _age: 27}
+
 }
