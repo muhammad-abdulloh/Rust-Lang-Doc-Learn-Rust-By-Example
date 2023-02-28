@@ -22,6 +22,8 @@ fn main(){
 }
 */
 
+/*
+
 #[derive(Debug)]
 struct Person<'a> {
 
@@ -33,10 +35,43 @@ struct Person<'a> {
     _age: u8
 }
 
+*/
+
+/*
 fn main(){  
     let _name = "Peter";
     let _age = 27;
     let peter = Person { _name, _age };
     // Pretty print :)
     println!("{:?}", peter);  // Person { _name: "Peter", _age: 27}
+
+    println!("{:#?}", peter);  // # qo'yilganda formatlab berar ekan qoyil
+    /* output
+    Person {
+        _name: "Peter",
+        _age: 27,
+    }
+     */ 
+}
+*/
+
+#[derive(Debug)]
+struct Person<'a> {
+    _name: &'a str,
+    _age: u8
+}
+
+fn main(){
+    let _name = "Peter";
+    let _age = 27;
+    let peter = Person {_name, _age}; // Personni ichidage propertylar bilan main dagi Personni ichiga bervoryatgan property ya'ni o'zgaruvchilar ham bir xil bo'lishi kerak ekan
+
+    // Pretty print// go'zal jilovlanishlar ostide formatlab ekranga chiqarish
+    println!("{:#?}", peter);
+/*
+    Person {
+        _name: "Peter",
+        _age: 27,
+    }   
+*/
 }
